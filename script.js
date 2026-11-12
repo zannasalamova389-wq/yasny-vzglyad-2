@@ -35,4 +35,25 @@ document.addEventListener('DOMContentLoaded', () => {
             heroContent.style.transform = 'translateY(0)';
         }, 100);
     }
+
+    // 3. Автокопирование ника Telegram при клике
+    const copyNick = document.getElementById('copy-nick');
+    if (copyNick) {
+        copyNick.addEventListener('click', () => {
+            // Копируем текст ника в буфер обмена
+            navigator.clipboard.writeText('@Zhanetka777').then(() => {
+                const originalText = copyNick.innerText;
+                copyNick.innerText = '✓ Ник скопирован!';
+                copyNick.style.color = '#25D366'; // Зеленый цвет для успеха
+                
+                // Возвращаем обратно через 2 секунды
+                setTimeout(() => {
+                    copyNick.innerText = originalText;
+                    copyNick.style.color = '#c29b62'; // Возвращаем золотой цвет
+                }, 2000);
+            }).catch(err => {
+                console.error('Ошибка копирования: ', err);
+            });
+        });
+    }
 });
