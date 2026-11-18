@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. Анимация появления главного экрана
+    // 2. Анимация главного экрана
     const heroContent = document.querySelector('.hero-content');
     if (heroContent) {
         heroContent.style.opacity = '0';
@@ -26,28 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100);
     }
 
-    // 3. Автокопирование ника Telegram
+    // 3. Автокопирование ника
     const copyNick = document.getElementById('copy-nick');
     if (copyNick) {
         copyNick.addEventListener('click', () => {
             navigator.clipboard.writeText('@Zhanetka777').then(() => {
                 const originalText = copyNick.innerText;
-                copyNick.innerText = '✓ Ник скопирован!';
+                copyNick.innerText = '✓ Скопировано!';
                 copyNick.style.color = '#25D366';
                 setTimeout(() => {
                     copyNick.innerText = originalText;
                     copyNick.style.color = '#c29b62';
                 }, 2000);
-            }).catch(err => {
-                console.error('Ошибка копирования: ', err);
             });
         });
     }
 
-    // 4. КАЛЬКУЛЯТОР УСЛУГ
+    // 4. Калькулятор
     const checkboxes = document.querySelectorAll('.calc-checkbox');
     const totalPriceEl = document.getElementById('total-price');
-
     if (checkboxes.length > 0 && totalPriceEl) {
         checkboxes.forEach(box => {
             box.addEventListener('change', () => {
@@ -60,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. КАРТА ДНЯ
+    // 5. Карта дня
     const drawBtn = document.getElementById('draw-card-btn');
     const cardResult = document.getElementById('card-result');
     const cards = [
@@ -71,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "Руна Феху", text: "Символ благополучия. Ваши усилия начнут приносить плоды. Время собирать урожай." },
         { name: "Руна Альгиз", text: "Вы под защитой высших сил. Смело двигайтесь вперед." }
     ];
-
     if (drawBtn && cardResult) {
         drawBtn.addEventListener('click', () => {
             cardResult.classList.remove('active');
@@ -86,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6. FAQ АККОРДЕОН
+    // 6. FAQ
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
         question.addEventListener('click', () => {
@@ -95,18 +91,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 7. ОТПРАВКА ФОРМЫ И КРАСИВОЕ ОКНО
+    // 7. Отправка формы и всплывающее окно
     const contactForm = document.getElementById('contact-form');
     const customModal = document.getElementById('custom-modal');
     const closeModalBtn = document.getElementById('close-modal');
 
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault(); // Останавливаем переход на страницу Formspree
+            e.preventDefault(); 
             
             const formData = new FormData(contactForm);
             
-            // Отправляем данные в фоне
             const response = await fetch(contactForm.action, {
                 method: 'POST',
                 body: formData,
@@ -114,22 +109,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
-                contactForm.reset(); // Очищаем форму
-                customModal.classList.add('show'); // Показываем окно
+                contactForm.reset(); 
+                customModal.classList.add('show'); 
             } else {
                 alert('Ой, что-то пошло не так. Попробуйте написать мне в Telegram.');
             }
         });
     }
 
-    // Закрытие окна по кнопке
     if (closeModalBtn) {
         closeModalBtn.addEventListener('click', () => {
             customModal.classList.remove('show');
         });
     }
 
-    // Закрытие окна при клике на темный фон
     if (customModal) {
         customModal.addEventListener('click', (e) => {
             if (e.target === customModal) {

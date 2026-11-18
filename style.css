@@ -49,9 +49,9 @@ body {
 }
 
 h1 {
-    font-family: 'Cormorant', serif; /* Поменяли шрифт */
-    font-size: clamp(3.5rem, 9vw, 6.5rem); /* Сделали чуть крупнее, так как шрифт изящный */
-    font-weight: 700; /* Сделали пожирнее, чтобы было похоже на картинку */
+    font-family: 'Cormorant', serif;
+    font-size: clamp(3.5rem, 9vw, 6.5rem);
+    font-weight: 700;
     line-height: 1.1;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -116,7 +116,6 @@ h1 {
     border: 1px solid rgba(194, 155, 98, 0.4);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     filter: sepia(15%) contrast(110%);
-    /* Анимация парения */
     animation: float 6s ease-in-out infinite;
 }
 
@@ -132,7 +131,7 @@ section {
 }
 
 .section-title {
-    font-family: 'Cormorant', serif; /* Поменяли шрифт */
+    font-family: 'Cormorant', serif;
     font-size: 3rem;
     color: #c29b62;
     text-align: center;
@@ -283,6 +282,87 @@ section {
     font-style: italic;
 }
 
+/* ================= ЗАПРОСЫ КЛИЕНТОВ ================= */
+.reviews {
+    background-color: #1a1b3a;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.review-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(194, 155, 98, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-card p {
+    font-size: 1rem;
+    color: #d1cec6;
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.review-author {
+    font-family: 'Forum', serif;
+    color: #c29b62;
+    font-size: 1.1rem;
+    text-align: right;
+    display: block;
+}
+
+.reviews-note {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #a8a5a0;
+    line-height: 1.6;
+}
+
+.reviews-note em {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* ================= КАК ПРОХОДИТ ЗАПИСЬ ================= */
+.how-booking {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #c29b62;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Forum', serif;
+    font-size: 1.8rem;
+    color: #c29b62;
+    margin: 0 auto 20px auto;
+}
+
+.step p {
+    font-size: 1rem;
+    color: #d1cec6;
+}
+
 /* ================= FAQ ================= */
 .faq-item {
     background: rgba(255, 255, 255, 0.03);
@@ -369,6 +449,33 @@ section {
 .contact-form textarea:focus {
     outline: none;
     border-color: #c29b62;
+}
+
+/* Галочка согласия */
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #a8a5a0;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-top: 3px;
+    accent-color: #c29b62;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Мелкий текст под кнопкой */
+.form-hint {
+    font-size: 0.75rem;
+    color: #777;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .divider {
@@ -549,5 +656,9 @@ section {
     .legal-disclaimer {
         padding: 15px;
         margin-top: 30px;
+    }
+    
+    .checkbox-label {
+        font-size: 0.8rem;
     }
 }

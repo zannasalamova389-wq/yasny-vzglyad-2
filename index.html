@@ -32,7 +32,6 @@
     <!-- Блок с вашей картинкой карт -->
     <section class="image-banner">
         <div class="container">
-            <!-- Файл cards.jpg должен лежать в этой же папке -->
             <img src="cards.jpg" alt="Гадание на картах со свечами" class="floating-img">
         </div>
     </section>
@@ -42,21 +41,12 @@
         <div class="container">
             <h2 class="section-title">Мой дар — это наследие</h2>
             <div class="about-content">
-                
-                <!-- Сюда можно добавить ваше фото. Если фото пока нет, оставьте этот блок закомментированным -->
-                <!-- 
-                <div class="about-image">
-                    <img src="my-photo.jpg" alt="Иоанна">
-                </div> 
-                -->
-
                 <div class="about-text">
                     <p><strong>Меня зовут Иоанна</strong> — это мой псевдоним. В старину на Руси так звучало мое настоящее имя Жанна (женская форма имени Иоанн). Я выбрала его, потому что мой дар имеет такие же глубокие корни.</p>
                     <p>Я не училась гаданию по видео в интернете. Мой дар передан мне по женской линии — <strong>от прапрабабушки</strong>.</p>
                     <p>Я работаю с живыми инструментами: <strong>игральными картами, цыганскими картами и рунами</strong>. В отличие от современных систем, эти инструменты несут в себе настоящую народную силу и традиции наших предков.</p>
                     <p>Главное в моей работе — это честность. Я помогаю вам увидеть ситуацию со стороны, найти скрытые причины и понять, куда двигаться дальше.</p>
                 </div>
-
                 <div class="about-quote">
                     <span>«Всё тайное становится явным»</span>
                 </div>
@@ -104,11 +94,57 @@
         </div>
     </section>
 
+    <!-- Запросы клиентов (вместо отзывов) -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title">С какими запросами ко мне приходят</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <p>«Я запуталась в отношениях. Не понимаю, что чувствует партнер и есть ли у нас будущее...»</p>
+                    <span class="review-author">— Ситуация: неопределенность</span>
+                </div>
+                <div class="review-card">
+                    <p>«Чувствую сильную тревогу, но не могу понять ее причину. Кажется, что я стою на месте...»</p>
+                    <span class="review-author">— Ситуация: внутренний блок</span>
+                </div>
+                <div class="review-card">
+                    <p>«Стою перед выбором, боюсь начинать новое дело. Хочу понять, стоит ли рисковать...»</p>
+                    <span class="review-author">— Ситуация: выбор пути</span>
+                </div>
+            </div>
+            <p class="reviews-note">Если вы узнали себя в одной из этих ситуаций — напишите мне. Мы во всем разберемся. <br><em>(Здесь скоро появятся реальные истории моих клиентов)</em></p>
+        </div>
+    </section>
+
+    <!-- Как проходит запись -->
+    <section class="how-booking">
+        <div class="container">
+            <h2 class="section-title">Как проходит запись</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <p>Вы оставляете заявку через форму</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <p>Я отвечаю на почту в течение 24 часов</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <p>Согласуем время и формат</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <p>После подтверждения вы вносите оплату</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ (Частые вопросы) -->
     <section class="faq">
         <div class="container">
             <h2 class="section-title">Частые вопросы</h2>
-            
             <div class="faq-item">
                 <button class="faq-question">А вы не накаркаете? <span>+</span></button>
                 <div class="faq-answer"><p>Я не предсказываю фатальных исходов и не пугаю. Моя задача — показать вам возможные варианты развития событий и дать совет, как действовать. Карты лишь подсвечивают скрытые причины, решение всегда за вами.</p></div>
@@ -116,10 +152,6 @@
             <div class="faq-item">
                 <button class="faq-question">Это конфиденциально? <span>+</span></button>
                 <div class="faq-answer"><p>Абсолютно. Всё, что вы расскажете на сессии, останется между нами. Я не записываю разговоры и не передаю информацию третьим лицам.</p></div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Как проходит оплата? <span>+</span></button>
-                <div class="faq-answer"><p>Оплата происходит после того, как мы обсудим ваш вопрос и я подтвержу, что готова сделать расклад. Перевод можно сделать на карту или по СБП.</p></div>
             </div>
         </div>
     </section>
@@ -130,34 +162,41 @@
             <h2 class="section-title">Напишите мне</h2>
             <p class="footer-text">Задайте свой вопрос или запишитесь на расклад. Конфиденциальность гарантирую.</p>
             
-            <!-- Форма подключена к Formspree -->
+            <!-- ОБНОВЛЕННАЯ ФОРМА (с русскими названиями полей) -->
             <form id="contact-form" action="https://formspree.io/f/mljbdaeb" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="text" name="contact" placeholder="Ваш Telegram или телефон" required>
-                <textarea name="message" rows="3" placeholder="Ваш вопрос или ситуация" required></textarea>
+                <input type="text" name="Имя" placeholder="Ваше имя" required>
+                <input type="email" name="Почта для ответа" placeholder="Ваш Email (для ответа)" required>
+                <input type="tel" name="Телефон" placeholder="Телефон (если удобнее в мессенджер)">
+                <textarea name="Вопрос клиента" rows="4" placeholder="Коротко опишите, с чем хотите разобраться. Это поможет мне подготовиться к раскладу." required></textarea>
+                
+                <label class="checkbox-label">
+                    <input type="checkbox" name="Согласие на обработку" required>
+                    <span>Согласен(на) на обработку персональных данных для ответа на заявку.</span>
+                </label>
+
                 <button type="submit" class="btn">Отправить заявку</button>
+                <p class="form-hint">Отвечу на указанную почту в течение 24 часов. Если письма нет — проверьте «Спам».</p>
             </form>
 
             <div class="divider">Или напишите напрямую:</div>
             
             <div class="contact-buttons">
-                <a href="https://telegram.me/Zhanetka777" class="btn-contact tg" target="_blank">Telegram</a>
-                <a href="https://wa.me/ВАШ_НОМЕР" class="btn-contact wa" target="_blank">WhatsApp</a>
+                <a href="https://telegram.me/@Zhanetka777" class="btn-contact tg" target="_blank">Telegram</a>
+                
             </div>
 
-            <!-- Блок с кликабельным ником -->
             <p style="margin-top: 20px; font-size: 0.9rem; color: #a8a5a0; text-align: center;">
                 Если кнопка не открывается, скопируйте мой ник в Telegram: <br>
-                <span id="copy-nick" style="color: #c29b62; font-weight: bold; font-size: 1.1rem; cursor: pointer; text-decoration: underline; display: inline-block; margin-top: 5px;" title="Нажмите, чтобы скопировать">
+                <span id="copy-nick" style="color: #c29b62; font-weight: bold; font-size: 1.1rem; cursor: pointer; text-decoration: underline; display: inline-block; margin-top: 5px;">
                     @Zhanetka777
                 </span>
             </p>
             
-            <!-- ПРАВОВАЯ ИНФОРМАЦИЯ И ДИСКЛЕЙМЕР -->
+            <!-- ОБНОВЛЕННЫЙ ДИСКЛЕЙМЕР -->
             <div class="legal-disclaimer">
                 <p><strong>Важное уведомление (18+):</strong> Сайт и предоставляемые услуги предназначены для лиц старше 18 лет.</p>
-                <p><strong>Характер услуг:</strong> Я не несу ответственности за исполнение желаний, исход событий или принятые вами решения. Моя работа заключается исключительно в раскладывании карт (или рун) и разъяснении их значений. Вы принимаете решения самостоятельно.</p>
-                <p><strong>Возврат средств:</strong> Оплата производится за сам процесс расклада и консультацию. Услуга считается оказанной после предоставления развернутого ответа. Возврат денежных средств после оказания услуги не осуществляется.</p>
+                <p><strong>Характер услуг:</strong> Вы принимаете решения самостоятельно, и ответственность за них лежит на вас. Моя работа заключается исключительно в раскладывании карт (или рун) и разъяснении их значений.</p>
+                <p><strong>Оплата и возврат:</strong> Оплата является предоплатой за консультацию и не подлежит возврату после её проведения.</p>
             </div>
 
             <p class="copyright">© Иоанна. Ясный взгляд.</p>
@@ -169,12 +208,11 @@
         <div class="modal-content">
             <div class="modal-ornament">✦</div>
             <h3>Заявка отправлена!</h3>
-            <p>Спасибо за доверие. Я свяжусь с вами в ближайшее время.</p>
+            <p>Спасибо за доверие. Я свяжусь с вами по указанной почте в ближайшее время.</p>
             <button id="close-modal" class="btn">Хорошо</button>
         </div>
     </div>
 
-    <!-- Подключаем скрипт -->
     <script src="script.js"></script>
 </body>
 </html>
